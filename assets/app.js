@@ -1,39 +1,27 @@
-const sections = document.getElementsByClassName('sections');
-const secBtns = document.getElementsByClassName('controls');
-const secBtn = document.getElementsByClassName('control');
-const allSections = document.getElementsByClassName('main-content');
+const sections = document.querySelectorAll('.sections');
+const secBtns = document.querySelectorAll('.controls');
+const secBtn = document.querySelectorAll('.control');
+const allSections = document.querySelectorAll('.main-content');
 
-function pageTrans() {
-    //button click active class, rids of not active 
-    for(let i = 0; i < secBtn.lenght; i++) {
-        secBtn[i].addEventListener("click", function() {
-            let currentBtn = document.getElementsByClassName('active');
-            currentBtn[0].className = currentBtn[0].className.replace('active-btn', '');
+function onsecBtnClick(){
+  //toggle active class on button
+  if(!this.classList.contains('active'))
+    this.classList.add("active") 
+  else 
+    this.classList.remove('active');
 
-            if (currentBtn.length > 0) {
-                currentBtn[0].className = current[0].className.replace(" .active", "");
-              }
-
-            this.className += 'active';
-        })
-    }
-    //sections active class, main content is the parent
-    allSections.addEventListener('click', (e) => {
-        const id = e.target.dataset.id;
-        if(id){
-            //remove selected from the other btn
-            secBtns.forEach((btn) => {
-                btn.classList.remove('active')
-            })
-            e.target.classList.add('active')
-
-            //hide other sections
-            sections.forEach((section) => {
-                section.classList.remove('active')
-            })
-            const element = document.getElementById(id);
-            element.classList.add('active');
-        }
-    })
+  pageTrans(this);
 }
-pageTrans();
+
+function pageTrans(e) {
+  //Change content on main page
+  let id = e.getAttribute('data-id')
+  let element = document.getElementById(id);
+
+  document.querySelectorAll('.active')[0].classList.remove('active')
+  element.classList.add('active');
+  
+}
+
+for(let i in secBtn) 
+  secBtn[i].addEventListener("click", onsecBtnClick)
