@@ -1,1 +1,131 @@
-//the skeleton of the project
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/662ac7b88d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="main-content">
+    <header class="section s1 header" id="home">
+        <div class="header-content">
+            <div class="h-shape"></div>
+            <div class="image">
+                <img id='image' src="./assets/images/image (2).png" alt="">
+            </div>
+            <div class="img-text">
+                <div class="centered">Hey, im Tahreem and this is my web developing portfolio!
+            </div>
+            </div>
+        </div>
+        <div class = 'right-header'>
+        </div>
+    </header>
+    <main>
+        <section class="section s2 aboutMe" id="aboutMe">
+            <div class = aboutMe>
+              <h2> About Me!</h2>
+            </div>
+            <br>
+            <div class = 'summary'>
+                <p>I am a college student (Associate of Science (AS) in Computer Science) 
+                    currently attending LaGuardia Community College. 
+                    After graduating, I plan to work as a web developer and 
+                    continue my study in computer science with a focus on cybersecurity. </p>
+            </div>
+            <div class = "whyTech">
+                <br>
+                <h3>Why am I interested in tech?</h3>
+            <div class="sum">
+                <br>
+                <p>The idea of doing so much with a single device intrigues me! 
+                    Like making websites, and knowing the use of 
+                    command line gives off a satisfying accomplishment.</p>
+            </div>
+            </div>
+        </section>
+        
+        <section class="section s3 Skills" id="Skills"></section>
+        <section class="section s4 Projects" id="Projects"></section>
+        <section class="section s5 Contact active" id="Contact"></section>
+           <div class="contactContain">
+            <div class="c-title">
+                <h2>Contact <span>Me</span></h2>
+            </div>
+            <div contact-content>
+                <div class="left-content">
+                    <h4>Reach me here</h4>
+                    <p>hvbdhv</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <p>
+                                <span>: username or email</span>
+                            </p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </div>
+                            <p>
+                                <span>: username or email</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content"></div>
+            </div>
+           </div>
+    </main>
+
+    <div class="controls">
+        <div>
+            <button class="control c1 active-btn" data-id="home">
+            <i class="fa-solid fa-house"></i>
+            </button>
+            <div class="home-2">My home</div>
+        </div>
+        <div>
+            <button class="control c2" data-id="aboutMe">
+            <i class="fa-solid fa-user"></i>
+            </button>
+            <div class="me">About Me</div>
+        </div>
+        <div>
+            <button class="control c3" data-id="Skills">
+            <i class="fa-solid fa-briefcase"></i>
+            </button>
+            <div class="myskill">My Skills</div>
+         </div>
+        <div>
+            <button class="control c4" data-id="Projects">
+            <i class="fa-solid fa-lock-open"></i>
+            </button>
+            <div class="work">Projects</div>
+        </div>
+        <div>
+            <button class="control c5" data-id="Contact">
+            <i class="fa-solid fa-message"></i>        
+            </button>
+            <div class="chat">Contact</div>
+        </div>
+    </div>
+
+    </div>
+    <script src="./assets/app.js"></script>
+</body>
+</html>
